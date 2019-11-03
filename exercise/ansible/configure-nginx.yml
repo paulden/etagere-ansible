@@ -4,6 +4,14 @@
     - name: Install important package
       become: yes
       apt:
-        name: cowsay
+        pkg:
+        - cowsay
+        - nginx
         state: latest
         update_cache: yes
+
+    - name: Configure my own page
+      become: yes
+      copy:
+        src: ../assets/index.html
+        dest: /var/www/html/index.nginx-debian.html
