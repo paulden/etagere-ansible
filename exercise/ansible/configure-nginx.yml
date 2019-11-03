@@ -1,15 +1,9 @@
 - hosts: [server]
 
-  tasks:
-    - name: Install important package
-      become: yes
-      apt:
-        pkg:
-        - cowsay
-        - nginx
-        state: latest
-        update_cache: yes
+  roles:
+    - role: install-nginx
 
+  tasks:
     - name: Configure my own page
       become: yes
       copy:
