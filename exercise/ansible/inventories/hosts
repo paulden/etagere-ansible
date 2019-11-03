@@ -1,0 +1,2 @@
+[server]
+ec2-34-248-197-137.eu-west-1.compute.amazonaws.com ansible_user=ubuntu

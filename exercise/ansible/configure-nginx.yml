@@ -1,0 +1,9 @@
+- hosts: [server]
+
+  tasks:
+    - name: Install important package
+      become: yes
+      apt:
+        name: cowsay
+        state: latest
+        update_cache: yes
