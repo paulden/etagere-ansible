@@ -7,5 +7,5 @@
     - name: Configure my own page
       become: yes
       copy:
-        src: ../assets/index.html
+        src: "{{ index_html_path }}"
         dest: /var/www/html/index.nginx-debian.html
