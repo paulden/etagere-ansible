@@ -1,0 +1,11 @@
+- hosts: [server]
+
+  roles:
+    - role: install-nginx
+
+  tasks:
+    - name: Configure my own page
+      become: yes
+      copy:
+        src: "{{ index_html_path }}"
+        dest: /var/www/html/index.nginx-debian.html
