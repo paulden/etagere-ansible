@@ -1,2 +1,2 @@
 [server]
-20.188.44.229 ansible_user=ubuntu
+<IP_ADRESS_DISPLAY_BY_TF> ansible_user=ubuntu

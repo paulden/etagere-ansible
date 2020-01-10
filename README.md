@@ -12,6 +12,16 @@ Terraform code is available to deploy and practice on actual instances.
 - In `setup/aws/`, run `terraform init` and then `terraform apply`.
 - In output, you should get the public DNS of each instance.
 
+### Azure
+
+- Get an access to Azure with CLI :
+    - Log in to your account : 
+        > `az login`
+    - Get subscription info :
+        > `az account list`
+- In the list display by the previous command, you need to keep the tenantId, copy it in topology.tf
+- In `ansible/inventories/hosts` add the ip adress of the machine you just set before.
+
 ## Exercise
 
 ### Goal

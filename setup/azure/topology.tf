@@ -1,5 +1,5 @@
 provider "azurerm" {
-  tenant_id = "06525c31-7149-4c7d-9049-7d164861fa25"
+  tenant_id = "<YOUR_TENANT_ID>"
 }
 
 resource "azurerm_resource_group" "dojo" {
@@ -67,13 +67,12 @@ resource "azurerm_virtual_machine" "dojo" {
   os_profile {
     computer_name  = "hostname"
     admin_username = "ubuntu"
-    admin_password = "Password1234!"
   }
   os_profile_linux_config {
     disable_password_authentication = true
     ssh_keys {
       path      = "/home/ubuntu/.ssh/authorized_keys"
-      key_data  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDZJNeL5dg9nZfStOJNF6MEy9rhsFsBekX8poAxv35XenBvWWISa/ZW0r4YZmnyGniQGmKJH+XPnRJccDvm2b4r+kyA3AcIRzUVNPXu9+9Tg8viBH0lOp4YZdmACBzBgZS7Otp/JRfWujFZf9Uy3QmQVEC6ByIdhzMMfgSFF/hgBveXPMgSNwIpUn6i3Xvxu1rzUgWbZ45+fB3VYvkM77tbQ89p62NiIdrDlztAhVTtaDTBW++GwnU3bvv4hz/oZBkihO+YB5yV9EhltV5ts7l+Ac3k0v68Pu5pzkYn9INobXn4oeDNrZWFyc70HWfQGIt9uVh8+nW2prZpvsTgAHcGfPfRv0JHTjeFmWcmc1NbbWo9+OwmOfO7dzJoG8TXa6Fi1aEJ2Qsgp0MZGiV//5v33nE1bTRU//db+L/dvlH1YKM4gpupDzBpgqnWSVEvibib+vA+sXuG2l7f6NB6uGMjcosHVFcE39QzXSX+0RsiCuPsUTqymAmafDvxagLzBodK+jQDWGxaWu38nSZufto01mJRHqvaTrTo++QpevjzhJD3I5U7qliwaCb6YnBVOJNOg3eq84N8yTKJHQQcXt+ZgB+xbxeB3OdY3EIhVzY0leOWSu/Osr3irq+X/gVxmnkQQ5vK0EU7aZS0L57zBOKv6xxcevTttmqgSyZOy6Nw/w=="
+      key_data  = "<YOUR_SSH_KEY>"
     } 
   }
   tags = {
